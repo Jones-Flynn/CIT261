@@ -3,7 +3,29 @@
 		<head>
 			<meta charset="utf-8">
 				<title>CIT261-Jones-Flynn</title>
-				<script src="https://jones-flynn.github.io/cit261/JavaScript/WeightLosePercentProg.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					function Weightlosepercent() {
+					// Read a Beginning Weight from the user.
+					var text = document.getElementById('BWinputBox').value;
+					// Read a Current Weight from the user.
+					var text1 = document.getElementById('CWinputBox').value;
+					// Convert what the user typed from text into a number.
+					var BWinputBox = parseFloat(text)
+					var CWinputBox = parseFloat(text1)
+					// Convert into Precent
+					var Percent = ((BWinputBox-CWinputBox)/BWinputBox)*100
+					// Round the number down to tenth decimal.
+					var digits = 2;
+					var multiplier = Math.pow(10, digits)
+					percentRounded = Math.round(Percent * multiplier) / multiplier;
+					// Display the Percent to the user.
+					document.getElementById('Weightlosepercent').innerHTML = percentRounded + "%";}
+				</script>
+				<script type="text/javascript">
+					function ChangeColor(){
+					document.getElementById('MyID').style.color = 'green';
+					}
+				</script>
 					<h1>Hello All! This site is under construction!</h1>
 						
 		</head>
@@ -28,6 +50,8 @@
 			<h3>LocalStorage<h3>
 			<h3>DOM - Document Object Model<h3>
 			<h3>CSS3 - using JavaScript<h3>
+				<h1 id="MyID">This headings will change color!</h1>
+				<button type="button" onclick="ChangeColor()">Click It!</button>
 			<h3>CSS3 - Transitions, Animations and Transformations<h3>
 			<h3>JavaScript Events<h3>
 			<h3>HTML5 Tags for media<h3>
