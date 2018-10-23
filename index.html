@@ -20,12 +20,27 @@
 					percentRounded = Math.round(Percent * multiplier) / multiplier;
 					// Display the Percent to the user.
 					document.getElementById('Weightlosepercent').innerHTML = percentRounded + "%";}
-				</script>
-				<script type="text/javascript">
+				
 					function ChangeColor(){
 					document.getElementById('MyID').style.color = 'green';
 					}
+				
+					function ChangeBack(){
+					document.getElementById('MyID').style.color = 'black';
+					}
+				
+					function ChangeSize(){
+					document.getElementById('MyID').style.fontSize = 'xx-large';
+					}
+				
+					function ChangeSizeBack(){
+					document.getElementById('MyID').style.fontSize = 'medium';
+					}
+					function StopHovering(){
+					document.getElementById('MyID2').innerHTML = "I said no!!!";
+					}	
 				</script>
+				
 					<h1>Hello All! This site is under construction!</h1>
 						
 		</head>
@@ -50,8 +65,12 @@
 			<h3>LocalStorage<h3>
 			<h3>DOM - Document Object Model<h3>
 			<h3>CSS3 - using JavaScript<h3>
-				<h4 id="MyID">This headings will change color!</h4>
-				<button type="button" onclick="ChangeColor()">Click It!</button>
+				<p id="MyID">This heading will change color with JavaScript!</p>
+				<button type="button" onclick="ChangeColor()">Change color!</button><br>
+				<button type="button" onclick="ChangeBack()">Change color back!</button><br>
+				<button type="button" onclick="ChangeSize()">Change text size!</button><br>
+				<button type="button" onclick="ChangeSizeBack()">Change text size back!</button><br>
+				<button id="MyID2" onmouseover="StopHovering()"type="button">Dont over on this!</button>
 			<h3>CSS3 - Transitions, Animations and Transformations<h3>
 			<h3>JavaScript Events<h3>
 			<h3>HTML5 Tags for media<h3>
